@@ -34,6 +34,18 @@
 			return false;
 		});
 	}
+
+	//calls the delete button from delete in the includes folder
+	$('.delete-button').click(function(){
+		var current_element = $(this);
+		var task_id = $(this).attr['id'];
+
+		$.post('includes/delete-task.php', {id: task_id}, function(){
+		current_element.parent().fadeOut("fast", function(){
+			$(this).remove();
+		});
+	});
+});
 </script>
 
 
