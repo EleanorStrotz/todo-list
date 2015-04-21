@@ -18,11 +18,11 @@
 				if($numrows>0){
 					while($row = $result->fetch_assoc()){
 						$task_id = $row['id'];
-						$task_name = $row['task'];
+						$task_name = $row["task"];
 
 						echo '<li>
 						<span>'.$task_name.'</span>
-						<img id= "'.$task_id. '" class="delete-button" width="10px" src="image/close.svg"/>
+						<img id= "'.$task_id. '" class="delete-button" width="10px" src="images/close.svg"/>
 						</li>';
 					}
 				}
@@ -38,6 +38,7 @@
 	</div>
 </body>
 <script scr="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 	add_task();//calling the add task function
 
